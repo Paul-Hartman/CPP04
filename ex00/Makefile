@@ -6,7 +6,7 @@
 #    By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/27 18:08:35 by phartman          #+#    #+#              #
-#    Updated: 2025/01/27 18:11:36 by phartman         ###   ########.fr        #
+#    Updated: 2025/01/29 12:12:00 by phartman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME :=animals
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98
 OBJDIR = objs
-SRCS = main.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS := $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 $(OBJDIR)/%.o: %.cpp
