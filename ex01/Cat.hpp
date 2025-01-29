@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:02:19 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:16:51 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:04:59 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Cat : public Animal{
 		~Cat();
 		
 		void makeSound() const;
+		
+		Brain* getBrain() const;
 		
 	private:
 		Brain* _brain;

@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:05 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:41:51 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:05:23 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,8 @@ Cat::~Cat(){
 
 void Cat::makeSound() const{
 	std::cout << "Meow" << std::endl;
+}
+
+Brain* Cat::getBrain() const{
+	return _brain;
 }

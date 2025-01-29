@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:43 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:47:28 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:05:53 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,8 @@ Dog::~Dog(){
 
 void Dog::makeSound() const{
 	std::cout << "Woof" << std::endl;
+}
+
+Brain* Dog::getBrain() const{
+	return _brain;
 }

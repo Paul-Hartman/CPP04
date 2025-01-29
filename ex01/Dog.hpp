@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 11:57:10 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:14:44 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:05:09 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Dog : public Animal{
 		~Dog();
 		
 		void makeSound() const;
+		Brain* getBrain() const;
 		
 	private:
 		Brain* _brain;
