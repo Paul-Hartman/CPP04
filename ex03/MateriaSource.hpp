@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 16:22:07 by phartman         ###   ########.fr       */
+/*   Created: 2025/01/29 15:39:40 by phartman          #+#    #+#             */
+/*   Updated: 2025/01/29 15:42:47 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#pragma once
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
+#include "IMateriaSource.hpp"
 
-int main()
-{
-	
-	const AAnimal* j = new Dog();
-	const AAnimal* i = new Cat();
-	Dog* d = new Dog();
-	Dog* d2 = new Dog(*d);
-	d2->makeSound();
-	j->makeSound();
-	i->makeSound();
-	delete j;
-	delete i;
-	return 0;
-}
+class MateriaSource : public IMateriaSource{
+	public:
+		MateriaSource();
+		MateriaSource(const MateriaSource &other);
+		MateriaSource &operator=(const MateriaSource &other);
+		~MateriaSource();
+
+		void learnMateria(AMateria* m);
+		AMateria* createMateria(std::string const & type);
+};
+
+#endif

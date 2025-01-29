@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 16:22:07 by phartman         ###   ########.fr       */
+/*   Created: 2025/01/29 15:10:55 by phartman          #+#    #+#             */
+/*   Updated: 2025/01/29 15:28:39 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#pragma once
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
 
+#include <iostream>
 
-int main()
-{
-	
-	const AAnimal* j = new Dog();
-	const AAnimal* i = new Cat();
-	Dog* d = new Dog();
-	Dog* d2 = new Dog(*d);
-	d2->makeSound();
-	j->makeSound();
-	i->makeSound();
-	delete j;
-	delete i;
-	return 0;
-}
+class AMateria;
+
+class ICharacter{
+	public:
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
+
+};
+
+#endif

@@ -5,26 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 16:22:07 by phartman         ###   ########.fr       */
+/*   Created: 2025/01/29 17:27:15 by phartman          #+#    #+#             */
+/*   Updated: 2025/01/29 17:27:54 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Character.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
-
-int main()
+int main(int argc, char const *argv[])
 {
-	
-	const AAnimal* j = new Dog();
-	const AAnimal* i = new Cat();
-	Dog* d = new Dog();
-	Dog* d2 = new Dog(*d);
-	d2->makeSound();
-	j->makeSound();
-	i->makeSound();
-	delete j;
-	delete i;
+	(void)argc;
+	(void)argv;
 	return 0;
 }

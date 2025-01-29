@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:05 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 14:42:56 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:26:44 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ Cat::Cat() : AAnimal("Cat") {
 	_brain = new Brain();
 }
 
-Cat::Cat(const Cat &other){
+Cat::Cat(const Cat &other) : AAnimal(other){
 	std::cout << "Cat copy constructor" << std::endl;
 	_brain = new Brain(*other._brain);
-	*this = other;
 }
 
 Cat &Cat::operator=(const Cat &other){
