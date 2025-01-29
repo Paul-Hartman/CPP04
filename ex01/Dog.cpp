@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:43 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:52:12 by phartman         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:47:28 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,28 @@
 
 Dog::Dog() : Animal("Dog"){
 	std::cout << "Dog default constructor" << std::endl;
+	_brain = new Brain();
 }
 
 Dog::Dog(const Dog &other){
 	std::cout << "Dog copy constructor" << std::endl;
-	if(this!=&other){
-		Animal::operator=(other);
-	}
+	_brain = new Brain(*other._brain);
 	*this = other;
 }
 
 Dog &Dog::operator=(const Dog &other){
 	std::cout << "Dog assignation operator" << std::endl;
-	Animal::operator=(other);
+	if(this != &other){
+		Animal::operator=(other);
+		delete _brain;
+		_brain = new Brain(*other._brain);
+	}
 	return *this;
 }
 
 Dog::~Dog(){
 	std::cout << "Dog destructor" << std::endl;
+	delete _brain;
 }
 
 void Dog::makeSound() const{

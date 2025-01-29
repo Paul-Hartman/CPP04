@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 12:22:05 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:51:51 by phartman         ###   ########.fr       */
+/*   Created: 2025/01/29 13:09:06 by phartman          #+#    #+#             */
+/*   Updated: 2025/01/29 13:09:44 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat() : Animal("Cat"){
-	std::cout << "Cat default constructor" << std::endl;
+Brain::Brain(){
+	std::cout << "Brain default constructor" << std::endl;
 }
 
-Cat::Cat(const Cat &other){
-	std::cout << "Cat copy constructor" << std::endl;
+Brain::Brain(const Brain &other){
+	std::cout << "Brain copy constructor" << std::endl;
 	*this = other;
 }
 
-Cat &Cat::operator=(const Cat &other){
-	std::cout << "Cat assignation operator" << std::endl;
-	if(this!=&other){
-		Animal::operator=(other);
-	}
+Brain &Brain::operator=(const Brain &other){
+	std::cout << "Brain assignation operator" << std::endl;
+	for (int i = 0; i < 100; i++)
+		ideas[i] = other.ideas[i];
 	return *this;
 }
 
-Cat::~Cat(){
-	std::cout << "Cat destructor" << std::endl;
+Brain::~Brain(){
+	std::cout << "Brain destructor" << std::endl;
 }
 
-void Cat::makeSound() const{
-	std::cout << "Meow" << std::endl;
-}
+
