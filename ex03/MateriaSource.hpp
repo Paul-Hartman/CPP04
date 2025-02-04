@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:39:40 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 15:42:47 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/04 12:19:27 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class MateriaSource : public IMateriaSource{
 
 		void learnMateria(AMateria* m);
 		AMateria* createMateria(std::string const & type);
+	
+	private:
+		AMateria* _materias[4];
 };
 
 #endif
