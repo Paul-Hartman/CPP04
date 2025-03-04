@@ -6,14 +6,14 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:04:31 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:00:31 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 13:49:05 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
 
+#define RED     "\033[31m"
+#define ORANGE  "\033[33m"
 #include <iostream>
 
 class WrongAnimal{
@@ -33,5 +33,3 @@ class WrongAnimal{
 	private:
 	
 };
-
-#endif

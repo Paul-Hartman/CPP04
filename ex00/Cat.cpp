@@ -6,23 +6,23 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:05 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:51:51 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 13:45:32 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() : Animal("Cat"){
-	std::cout << "Cat default constructor" << std::endl;
+	std::cout << YELLOW <<  "Cat default constructor" << std::endl;
 }
 
 Cat::Cat(const Cat &other){
-	std::cout << "Cat copy constructor" << std::endl;
+	std::cout <<YELLOW <<  "Cat copy constructor" << std::endl;
 	*this = other;
 }
 
 Cat &Cat::operator=(const Cat &other){
-	std::cout << "Cat assignation operator" << std::endl;
+	std::cout <<YELLOW <<  "Cat assignation operator" << std::endl;
 	if(this!=&other){
 		Animal::operator=(other);
 	}
@@ -30,9 +30,9 @@ Cat &Cat::operator=(const Cat &other){
 }
 
 Cat::~Cat(){
-	std::cout << "Cat destructor" << std::endl;
+	std::cout <<YELLOW <<  "Cat destructor" << std::endl;
 }
 
 void Cat::makeSound() const{
-	std::cout << "Meow" << std::endl;
+	std::cout <<YELLOW <<  "Meow" << std::endl;
 }

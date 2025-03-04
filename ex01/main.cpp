@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/27 18:09:15 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 13:43:14 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,18 @@
 #include "Dog.hpp"
 
 void testDeepCopy() {
-    Dog originalDog;
-    originalDog.getBrain()->ideas[0] = "Original Dog Idea 1";
-    originalDog.getBrain()->ideas[1] = "Original Dog Idea 2";
-
-    Dog copiedDog = originalDog; // Copy constructor
-
-    // Modify the original dog's brain
-    originalDog.getBrain()->ideas[0] = "Modified Dog Idea 1";
-
-    std::cout << "Original Dog Brain Idea 0: " << originalDog.getBrain()->ideas[0] << std::endl;
-    std::cout << "Copied Dog Brain Idea 0: " << copiedDog.getBrain()->ideas[0] << std::endl;
-
-    Cat originalCat;
-    originalCat.getBrain()->ideas[0] = "Original Cat Idea 1";
-    originalCat.getBrain()->ideas[1] = "Original Cat Idea 2";
-
-    Cat copiedCat = originalCat; // Copy constructor
-
-    // Modify the original cat's brain
-    originalCat.getBrain()->ideas[0] = "Modified Cat Idea 1";
-
-    std::cout << "Original Cat Brain Idea 0: " << originalCat.getBrain()->ideas[0] << std::endl;
-    std::cout << "Copied Cat Brain Idea 0: " << copiedCat.getBrain()->ideas[0] << std::endl;
+	Dog a;
+	Dog b(a);
+	Dog c = a;
+	Dog d;
+	d = a;
+	
+	std::cout << "a: " << a() << std::endl;
+	std::cout << "b: " << b.getBrainAddress() << std::endl;
+	std::cout << "c: " << c.getBrainAddress() << std::endl;
+	std::cout << "d: " << d.getBrainAddress() << std::endl;	
 }
+
 
 int main()
 {
