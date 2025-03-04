@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:02:19 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 14:40:59 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:13 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef CAT_HPP
-#define CAT_HPP
 
 #include "AAnimal.hpp"
 #include "Brain.hpp"
@@ -31,5 +29,3 @@ class Cat : public AAnimal{
 	private:
 		Brain* _brain;
 };
-
-#endif

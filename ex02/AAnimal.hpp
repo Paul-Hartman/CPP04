@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #pragma once
-#ifndef AANIMAL_HPP
-#define AANIMAL_HPP
 
 #include <iostream>
 
@@ -33,5 +31,3 @@ class AAnimal{
 	private:
 		
 };
-
-#endif

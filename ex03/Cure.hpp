@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:36:15 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 17:00:01 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:47 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef CURE_HPP
-#define CURE_HPP
 
 #include "AMateria.hpp"
 
@@ -27,6 +25,3 @@ class Cure : public AMateria{
 		AMateria* clone() const;
 		void use(ICharacter &target);
 };
-
-
-#endif

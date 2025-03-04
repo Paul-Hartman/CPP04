@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:36:20 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 16:38:42 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:54 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef ICE_HPP
-#define ICE_HPP
 
 #include "AMateria.hpp"
 
@@ -27,5 +25,3 @@ class Ice : public AMateria{
 		AMateria* clone() const;
 		void use(ICharacter &target);
 };
-
-#endif

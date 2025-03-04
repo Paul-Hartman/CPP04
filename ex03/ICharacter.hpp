@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:10:55 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 15:28:39 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:42:00 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
 
 #include <iostream>
 
@@ -27,5 +25,3 @@ class ICharacter{
 		virtual void use(int idx, ICharacter& target) = 0;
 
 };
-
-#endif

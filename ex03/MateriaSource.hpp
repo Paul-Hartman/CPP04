@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:39:40 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/04 12:19:27 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:42:15 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef MATERIASOURCE_HPP
-#define MATERIASOURCE_HPP
 
 #include "IMateriaSource.hpp"
 
@@ -29,5 +27,3 @@ class MateriaSource : public IMateriaSource{
 	private:
 		AMateria* _materias[4];
 };
-
-#endif

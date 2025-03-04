@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:44:00 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 17:35:02 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:41 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
 
 #include "ICharacter.hpp"
 #include "Ice.hpp"
@@ -35,5 +33,3 @@ class Character : public ICharacter{
 		std::string _name;
 		AMateria* _inventory[4];
 };
-
-#endif

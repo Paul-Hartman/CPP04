@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 14:53:27 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 15:09:03 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:33 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
 
 #include <iostream>
 #include "ICharacter.hpp"
@@ -38,5 +36,3 @@ class AMateria{
 
 
 };
-
-#endif

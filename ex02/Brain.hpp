@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:04:58 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 13:08:59 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:41:07 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
 
 #include <iostream>
 class Brain{
@@ -25,5 +23,3 @@ class Brain{
 		std::string ideas[100];
 
 };
-
-#endif
