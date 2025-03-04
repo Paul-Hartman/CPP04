@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 14:08:34 by phartman         ###   ########.fr       */
+/*   Updated: 2025/02/27 18:09:15 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,23 @@ void testDeepCopy() {
     std::cout << "Copied Cat Brain Idea 0: " << copiedCat.getBrain()->ideas[0] << std::endl;
 }
 
-
 int main()
 {
-	// int totalAnimals = 20;
-	// Animal* animals[totalAnimals];
+	int totalAnimals = 4;
+	Animal* animals[totalAnimals];
 
-	// for(int i = 0; i < totalAnimals; i++){
-	// 	if(i % 2 == 0)
-	// 		animals[i] = new Dog();
-	// 	else
-	// 		animals[i] = new Cat();
-	// }
+	for(int i = 0; i < totalAnimals; i++){
+		if(i % 2 == 0)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
 	
-	// for(int i = 0; i < totalAnimals; i++){
-	// 	animals[i]->makeSound();
-	// 	delete animals[i];
-	// }
-
+	for(int i = 0; i < totalAnimals; i++){
+		animals[i]->makeSound();
+		delete animals[i];
+	}
 	testDeepCopy();
+	
 	return 0;
 }
