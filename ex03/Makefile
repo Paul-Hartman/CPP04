@@ -6,7 +6,7 @@
 #    By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/29 14:46:03 by phartman          #+#    #+#              #
-#    Updated: 2025/03/04 13:28:36 by phartman         ###   ########.fr        #
+#    Updated: 2025/03/04 14:58:00 by phartman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,8 @@ OBJDIR = objs
 SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJS := $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
-$(OBJDIR):
+$(OBJDIR)/%.o: %.cpp
 	mkdir -p $(OBJDIR)
-	
-$(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

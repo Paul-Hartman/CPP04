@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:04:58 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/27 15:42:13 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:03:55 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -29,5 +27,3 @@ class Brain{
 		std::string ideas[100];
 
 };
-
-#endif

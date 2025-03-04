@@ -6,20 +6,18 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:05 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/27 15:43:43 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:29:46 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : Animal("Cat"), _brain(new Brain()){
 	std::cout << YELLOW << "Cat default constructor" << std::endl;
-	_brain = new Brain();
 }
 
 Cat::Cat(const Cat &other){
 	std::cout << YELLOW <<  "Cat copy constructor" << std::endl;
-	_brain = new Brain(*other._brain);
 	*this = other;
 }
 

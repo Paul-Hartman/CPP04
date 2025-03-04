@@ -6,20 +6,18 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:22:43 by phartman          #+#    #+#             */
-/*   Updated: 2025/02/27 15:44:09 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:34:33 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal("Dog"){
+Dog::Dog() : Animal("Dog"), _brain(new Brain()){
 	std::cout << BLUE << "Dog default constructor" << std::endl;
-	_brain = new Brain();
 }
 
-Dog::Dog(const Dog &other){
+Dog::Dog(const Dog &other) { 
 	std::cout << BLUE << "Dog copy constructor" << std::endl;
-	_brain = new Brain(*other._brain);
 	*this = other;
 }
 

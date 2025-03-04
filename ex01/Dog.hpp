@@ -6,13 +6,11 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 11:57:10 by phartman          #+#    #+#             */
-/*   Updated: 2025/01/29 14:05:09 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:04:09 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef DOG_HPP
-#define DOG_HPP
 #include "Animal.hpp"
 #include "Brain.hpp"
 
@@ -29,5 +27,3 @@ class Dog : public Animal{
 	private:
 		Brain* _brain;
 };
-
-#endif

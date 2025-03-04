@@ -6,7 +6,7 @@
 /*   By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 18:09:12 by phartman          #+#    #+#             */
-/*   Updated: 2025/03/04 13:43:14 by phartman         ###   ########.fr       */
+/*   Updated: 2025/03/04 14:30:21 by phartman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,29 @@
 
 void testDeepCopy() {
 	Dog a;
-	Dog b(a);
-	Dog c = a;
-	Dog d;
-	d = a;
+	Dog b;
+	b = a;
 	
-	std::cout << "a: " << a() << std::endl;
-	std::cout << "b: " << b.getBrainAddress() << std::endl;
-	std::cout << "c: " << c.getBrainAddress() << std::endl;
-	std::cout << "d: " << d.getBrainAddress() << std::endl;	
+	std::cout << "a: " << a.getBrain() << std::endl;
+	std::cout << "d: " << b.getBrain() << std::endl;
+	a.getBrain()->ideas[0] = "new idea";
+	std::cout << "First idea of brain a:" << a.getBrain()->ideas[0] << std::endl;
+	std::cout << "First idea of brain b: " << b.getBrain()->ideas[0] << std::endl;
 }
 
 
+void subjectTest()
+{
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	delete j;
+	delete i;
+}
+
 int main()
 {
+
+	subjectTest();
 	int totalAnimals = 4;
 	Animal* animals[totalAnimals];
 

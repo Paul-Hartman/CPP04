@@ -6,7 +6,7 @@
 #    By: phartman <phartman@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/27 18:08:35 by phartman          #+#    #+#              #
-#    Updated: 2025/03/04 13:26:08 by phartman         ###   ########.fr        #
+#    Updated: 2025/03/04 14:55:49 by phartman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,8 @@ OBJDIR = objs
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS := $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
-$(OBJDIR):
+$(OBJDIR)/%.o: %.cpp
 	mkdir -p $(OBJDIR)
-	
-$(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
